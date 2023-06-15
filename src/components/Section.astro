@@ -3,13 +3,16 @@ interface Props {
   title: string;
   class?: string;
   description?: string;
+  image?: string;
+  imageAlt?: string;
 }
 
-const { title, description, class: classes } = Astro.props;
+const { title, description, class: classes, image, imageAlt } = Astro.props;
 ---
 
 <section class={`p-20 text-center text-white ${classes}`}>
   <div class="my-4">
+    {image && <img src={image} alt={imageAlt ?? ""} class="inline-block" />}
     <h1 class="text-xl font-bold md:text-9xl">{title}</h1>
     <h2 class="text-base md:text-2xl">{description}</h2>
   </div>
