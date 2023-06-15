@@ -1,13 +1,16 @@
 ---
 import TitleSection from "../components/TitleSection.astro";
-import "../global.css";
 import Layout from "../layouts/Layout.astro";
+import { getLocaleFromUrl } from "../utils/locales";
+
+const locale = getLocaleFromUrl(Astro.url);
+Astro.params.locale = locale;
 ---
 
 <Layout>
   <TitleSection title="404 Not found">
     <div class="my-4">
-      <a href="/" class="text-base text-blue-400 md:text-2xl"
+      <a href={`/${locale}`} class="text-base text-blue-400 md:text-2xl"
         >Click me to go back to the home page</a
       >
     </div>

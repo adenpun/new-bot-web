@@ -1,6 +1,16 @@
+---
+import { t } from "../utils/locales";
+
+const locale = Astro.params.locale;
+---
+
 <nav class="flex justify-center p-5 md:justify-start">
-  <a href="/" class="inline-block">
-    <img src="/new-bot.png" alt="New Bot Logo" class="inline h-10" />
-    <span class="text-xl">New Bot</span>
+  <a href={`/${locale ?? ""}`} class="inline-block">
+    <img
+      src="/new-bot.png"
+      alt={t("bot.logo.alt", locale)}
+      class="inline h-10"
+    />
+    <span class="text-xl">{t("bot.name", locale)}</span>
   </a>
 </nav>

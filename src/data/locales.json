@@ -1,0 +1,30 @@
+{
+  "en": {
+    "banner.incomplete": "⚠️ Caution! New Bot is currently incomplete! ⚠️",
+    "bot.description": "A useless, open-sourced, not yet finished Discord bot",
+    "bot.name": "New Bot",
+    "bot.logo.alt": "New Bot Logo",
+    "feature.say.emulator.input.placeholder": "/say the things you wanna say!",
+    "feature.say.emulator.introduction": "Goodest /say emulator in human history!",
+    "feature.say.emulator.newbotmonologue": "Howdy! You can use /say to make me say anything!",
+    "feature.say.emulator.noscript": "You must enable JavaScript for the emulator to work!",
+    "feature.say.title": "Super useless feature: /say",
+    "text.invite_me": "Invite me!",
+    "text.more_features_coming_soon": "More features coming soon!",
+    "text.user": "User"
+  },
+  "zh": {
+    "banner.incomplete": "⚠️ 注意！新機器人還未完成，功能不完整！ ⚠️",
+    "bot.description": "一個沒用、開源、未完成的Discord機器人",
+    "bot.name": "新機器人",
+    "bot.logo.alt": "新機器人標誌",
+    "feature.say.emulator.input.placeholder": "/say 你想說的話！",
+    "feature.say.emulator.introduction": "屎上最棒 /say 模擬器！",
+    "feature.say.emulator.newbotmonologue": "你好! 你可以用 /say 來令我說任何話！",
+    "feature.say.emulator.noscript": "你需要開啟JavaScript才能使用這個模擬器！",
+    "feature.say.title": "超沒用的功能：/say",
+    "text.invite_me": "邀請我!",
+    "text.more_features_coming_soon": "更多功能即將來臨！",
+    "text.user": "用戶"
+  }
+}
