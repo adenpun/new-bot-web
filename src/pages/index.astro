@@ -1,13 +1,21 @@
 ---
-import Section from "../components/Section.astro";
+import SayEmulator from "../components/SayEmulator.svelte";
+import TitleSection from "../components/TitleSection.astro";
 import "../global.css";
 import Layout from "../layouts/Layout.astro";
+
+const visited = Astro.cookies.get("visited_main").number();
+
+Astro.cookies.set(
+  "visited_main",
+  ((isNaN(visited) ? 0 : visited) + 1).toString()
+);
 ---
 
 <Layout>
-  <Section
+  <TitleSection
     title="New Bot"
-    description="A useless, open-sourced Discord bot."
+    description="A useless, open-sourced Discord bot. (Not yet finished)"
     image="/new-bot.png"
     imageAlt="New Bot Logo"
     class="bg-gradient-to-br from-[#DF7126] to-[#AC3232]"
@@ -26,5 +34,18 @@ import Layout from "../layouts/Layout.astro";
         >Invite me!</a
       >
     </div>
-  </Section>
+    {visited < 3 && <div class="text-9xl">Scroll down...</div>}
+  </TitleSection>
+  <section class="p-10 text-center">
+    <h2 class="my-3 text-3xl font-bold">Bad feature: /say whatever you want</h2>
+    <noscript
+      ><div class="text-9xl">
+        You must enable JavaScript for the emulator to work!
+      </div>
+    </noscript>
+    <SayEmulator client:visible />
+  </section>
+  <section class="bg-white p-10 text-center text-black">
+    <h2 class="my-3 text-3xl font-bold">More features coming soon!</h2>
+  </section>
 </Layout>
