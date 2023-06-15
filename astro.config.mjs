@@ -20,7 +20,6 @@ export default defineConfig({
   ],
   output: "hybrid",
   redirects: {
-    "/": "/en/",
     invite:
       "https://discord.com/oauth2/authorize?client_id=995630008821354496&permissions=8&scope=bot+applications.commands",
   },
