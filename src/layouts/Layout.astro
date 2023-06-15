@@ -1,0 +1,20 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import "../global.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/new-bot.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>New Bot</title>
+  </head>
+  <body class="bg-black text-white">
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>
