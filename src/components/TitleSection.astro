@@ -5,15 +5,27 @@ interface Props {
   description?: string;
   image?: string;
   imageAlt?: string;
+  normalTextSize?: boolean;
 }
 
-const { title, description, class: classes, image, imageAlt } = Astro.props;
+const {
+  title,
+  description,
+  class: classes,
+  image,
+  imageAlt,
+  normalTextSize,
+} = Astro.props;
 ---
 
-<section class={`py-20 text-center text-white ${classes}`}>
+<section class={`py-20 text-center ${classes}`}>
   <div class="my-4">
     {image && <img src={image} alt={imageAlt ?? ""} class="inline-block" />}
-    <h1 class="text-xl font-bold md:text-9xl">{title}</h1>
+    <h1
+      class={`font-bold ${normalTextSize ? "text-4xl" : "text-xl md:text-9xl"}`}
+    >
+      {title}
+    </h1>
     <h2 class="text-base md:text-2xl">{description}</h2>
   </div>
   <slot />
