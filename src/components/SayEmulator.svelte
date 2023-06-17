@@ -5,7 +5,7 @@
   function send() {
     const value = input.value;
     if (value.startsWith("/say ")) {
-      messages += `${t("user", locale)}: ${value}\nNew Bot: ${value
+      messages += `${t("text.user", locale)}: ${value}\nNew Bot: ${value
         .split("/say")[1]
         .trim()}\n`;
       input.value = "";

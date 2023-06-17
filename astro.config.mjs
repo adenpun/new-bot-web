@@ -22,5 +22,6 @@ export default defineConfig({
   redirects: {
     invite:
       "https://discord.com/oauth2/authorize?client_id=995630008821354496&permissions=8&scope=bot+applications.commands",
+    github: "https://github.com/adenpun/new-bot-4",
   },
 });

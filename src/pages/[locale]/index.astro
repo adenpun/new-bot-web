@@ -3,6 +3,8 @@ import SayEmulator from "../../components/SayEmulator.svelte";
 import TitleSection from "../../components/TitleSection.astro";
 import Layout from "../../layouts/Layout.astro";
 import { getLocaleStaticPaths, t } from "../../utils/locales";
+import githubLogo from "../../images/github/logo-white.png";
+import githubMark from "../../images/github/mark-white.svg";
 
 export function getStaticPaths() {
   return getLocaleStaticPaths();
@@ -19,13 +21,21 @@ const locale = Astro.params.locale;
     imageAlt="New Bot Logo"
     class="bg-gradient-to-br from-[#DF7126] to-[#AC3232]"
   >
-    <div class="my-4">
+    <div class="my-4 flex justify-center gap-5">
       <a
         href="/invite"
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-block rounded-lg bg-[#7289DA] p-5 text-lg font-bold text-white"
+        class="inline-flex items-center rounded-lg bg-[#5865F2] p-5 text-lg font-bold text-white"
         >{t("text.invite_me", locale)}</a
+      >
+      <a
+        href="/github"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center rounded-lg bg-[#171515] p-5 text-lg font-bold text-white"
+        ><img src={githubMark} alt="GitHub Mark" class="inline-block h-7" />
+        <img src={githubLogo} alt="GitHub Logo" class="inline-block h-7" /></a
       >
     </div>
   </TitleSection>

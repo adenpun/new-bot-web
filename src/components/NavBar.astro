@@ -1,11 +1,12 @@
 ---
 import { t } from "../utils/locales";
+import LanguageSelector from "./LanguageSelector.svelte";
 
 const locale = Astro.params.locale;
 ---
 
-<nav class="flex justify-center p-5 md:justify-start">
-  <a href={`/${locale ?? ""}`} class="inline-block">
+<nav class="flex items-center justify-center bg-black p-5 md:justify-start">
+  <a href={`/${locale ?? ""}`} class="inline-flex items-center">
     <img
       src="/new-bot.png"
       alt={t("bot.logo.alt", locale)}
@@ -13,4 +14,6 @@ const locale = Astro.params.locale;
     />
     <span class="text-xl">{t("bot.name", locale)}</span>
   </a>
+  <div class="flex-grow"></div>
+  <LanguageSelector client:load {locale} />
 </nav>

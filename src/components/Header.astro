@@ -3,10 +3,12 @@ import { t } from "../utils/locales";
 import NavBar from "./NavBar.astro";
 ---
 
-<div
-  class="animate-pulse bg-green-500 py-5 text-center text-lg font-bold text-white md:text-xl"
->
-  {t("banner.incomplete", Astro.params.locale)}
-</div>
+<header>
+  <div
+    class="animate-flash bg-red-500 py-5 text-center text-lg font-bold text-white md:text-xl"
+  >
+    {t("banner.incomplete", Astro.params.locale)}
+  </div>
 
-<NavBar />
+  <NavBar />
+</header>

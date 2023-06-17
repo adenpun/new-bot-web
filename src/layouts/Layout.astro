@@ -2,6 +2,7 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import "../global.css";
+import { t } from "../utils/locales";
 ---
 
 <html lang="en">
@@ -10,7 +11,7 @@ import "../global.css";
     <link rel="icon" type="image/png" href="/new-bot.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>New Bot</title>
+    <title>{t("bot.name", Astro.params.locale)}</title>
   </head>
   <body class="bg-black text-white">
     <Header />
